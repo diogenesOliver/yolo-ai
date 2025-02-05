@@ -30,10 +30,10 @@ class PlateRecognitionOCR:
                 cv2.rectangle(frame, (int(x1), int(y1)), (int(x2), int(y2)), (0, 255, 0), 2)  
                 cv2.putText(frame, plate_text, (int(x1), int(y1) - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
 
-        cv2.imwrite('results/frame4.jpg', frame)
+        cv2.imwrite('results/frame5.jpg', frame)
 
         return "Process concluded"
     
 
-frame = cv2.imread("records/frame4.jpg")
+frame = cv2.imread("records/frame5.jpg")
 PlateRecognitionOCR().apply_ocr_on_frame_plate(frame)
