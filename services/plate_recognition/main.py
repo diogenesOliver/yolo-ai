@@ -28,26 +28,6 @@ class PlateRecognition:
         cv2.destroyAllWindows()
         
         return frame
-        """frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-
-        for detection in results.pred[0]:
-            x1, y1, x2, y2, conf, cls = detection.tolist()
-
-            plate_region = frame_rgb[int(y1):int(y2), int(x1):int(x2)]
-
-            ocr_results = self.reader.readtext(plate_region)
-            plate_text = " ".join([result[1] for result in ocr_results])  
-
-            cv2.rectangle(frame, (int(x1), int(y1)), (int(x2), int(y2)), (0, 255, 0), 2)  
-            cv2.putText(frame, plate_text, (int(x1), int(y1) - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
-
-        cv2.imshow("Plate Recognition", frame)
-        cv2.waitKey(0)
-
-        cv2.imwrite('results/plate_recognized.jpg', frame)
-
-        return "Process concluded"
-        """
     
     @staticmethod
     def process_image_in_folder(folder_path, output_folder):
