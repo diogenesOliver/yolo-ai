@@ -3,3 +3,7 @@
 # defualt files name projects
 **/records
 **/results
+**/runs
+
+# YOLO
+**/yolo
