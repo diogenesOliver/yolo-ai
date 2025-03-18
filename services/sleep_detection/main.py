@@ -11,7 +11,7 @@ class SleedDetection:
         self.model = YOLO("../../yolo/head_yolov8n.pt")
         pass
 
-    def sleep_detection(self):
+    def process_frame(self):
         cap = cv2.VideoCapture("records/sleep_test.mp4")
 
         while cap.isOpened():
@@ -30,9 +30,9 @@ class SleedDetection:
         cv2.destroyAllWindows()
         return "Done ." 
 
-if __name__ == "__main__":
+"""if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] == "-r":
         print("Running sleep detection")
         SleedDetection().sleep_detection()
 
-SleedDetection().sleep_detection()
+SleedDetection().sleep_detection()"""
