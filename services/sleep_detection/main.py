@@ -8,7 +8,6 @@ os.environ["QT_QPA_PLATFORM"] = "xcb"
 
 class SleedDetection:
     def __init__(self):
-        self.model = YOLO("../../yolo/head_yolov8n.pt")
         pass
 
     def process_frame(self):
