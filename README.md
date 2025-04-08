@@ -13,15 +13,13 @@ Here we have a representation of the architecture of the application folders
 
 ```bash
 📂 yolo-ai/
-├── 📂 src/
-│     └── main.py
 ├── 📂 services/
 │     └── service-1
 │     └── service-2
 │     └── service-n ...
 ├── 📂 utils/
 │     └── yolo_model_handler.py
-│   📂 yolo/
+├── 📂 yolo/
 │     └── mode-1.pt
 │     └── model-2.pt
 │     └── model-n.pt
