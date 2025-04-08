@@ -13,6 +13,8 @@ Here we have a representation of the architecture of the application folders
 
 ```bash
 📂 yolo-ai/
+├── 📂 process/
+│     └── main.py
 ├── 📂 services/
 │     └── service-1
 │     └── service-2
