@@ -20,9 +20,9 @@ Here we have a representation of the architecture of the application folders
 ├── 📂 utils/
 │     └── yolo_model_handler.py
 ├── 📂 yolo/
-│     └── mode-1.pt
+│     └── model-1.pt
 │     └── model-2.pt
-│     └── model-n.pt
+│     └── model-n.pt ...
 ├── main.py
 ├── README.md
 ├── config.json
