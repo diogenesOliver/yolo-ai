@@ -21,6 +21,8 @@ Here we have a representation of the architecture of the application folders
 │     └── service-n ...
 ├── 📂 utils/
 │     └── yolo_model_handler.py
+├── 📂 video_capture/
+│     └── main.py
 ├── 📂 yolo/
 │     └── model-1.pt
 │     └── model-2.pt
