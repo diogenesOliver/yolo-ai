@@ -1,8 +1,8 @@
 import json
 import argparse
-import logging as logs
 
-#from utils.yolo_model_handler import YoloModelHandler
+from utils.yolo_model_handler import YOLOModelHandler
+from video_capture.video_capture_async import VideoProcess
 
 with open('/home/diogenes/Documentos/www/yolo-ai/config.json') as f:
     config = json.load(f)
