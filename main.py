@@ -30,11 +30,11 @@ def main():
                     file = int(os.path.splitext(file)[0])
                     
                     if file == video_id:
-                        # Apply logic to process the video
+                        video_name = f"{file}.mp4"
+                        VideoProcess(video_name).open_video()
 
-                        return
-                    else:
-                        print("[ERROR] - No video file found")
+                        print("[INFO] - Video processing started")
+
                         return
 
     if args.background:
