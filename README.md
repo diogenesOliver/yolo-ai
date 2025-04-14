@@ -32,7 +32,6 @@ Here we have a representation of the architecture of the application folders
 ├── config.json
 ├── .gitignore
 ```
-<br>
 
 <h3>💡 Project Idea</h3>
 
