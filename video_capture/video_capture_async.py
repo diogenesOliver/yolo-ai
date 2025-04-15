@@ -3,7 +3,7 @@ import cv2
 import asyncio
 
 class VideoProcess:
-    def __init__(self, video_name, target_size=(1280, 720)):
+    def __init__(self, video_name, target_size=(800, 600)):
         self.video_name = video_name
         self.target_size = target_size
         self.video_path = os.path.join('./records', video_name)
@@ -20,6 +20,8 @@ class VideoProcess:
 
         while True:
             ret, frame = self.cap.read()
+            frame = cv2.resize(frame, self.target_size)
+
             if not ret:
                 break
 
