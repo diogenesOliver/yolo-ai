@@ -27,6 +27,8 @@ Here we have a representation of the architecture of the application folders
 │     └── model-1.pt
 │     └── model-2.pt
 │     └── model-n.pt ...
+├── 📂 video-capture/
+│     └── video_capture_async.py
 ├── main.py
 ├── README.md
 ├── config.json
