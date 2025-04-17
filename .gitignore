@@ -6,5 +6,7 @@
 **/results
 **/runs
 
+__config_cache__.json
+
 # YOLO
 **/yolo
