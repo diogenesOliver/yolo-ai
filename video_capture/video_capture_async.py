@@ -2,12 +2,14 @@ import os
 import cv2
 import asyncio
 
+from services.sleep_detection.main import SleedDetection
+
 class VideoProcess:
     def __init__(self, video_name, target_size=(800, 600)):
         self.video_name = video_name
         self.target_size = target_size
         self.video_path = os.path.join('./records', video_name)
-        
+
         pass
 
     def open_video(self):
@@ -28,3 +30,16 @@ class VideoProcess:
             cv2.imshow("Video", frame)
             if cv2.waitKey(25) & 0xFF == ord('q'):
                 break
+
+    async def process_video_async(self):
+        self.open_video()
+        
+        while self.cap.isOpened():
+            ret, frame = self.cap.read()
+            if not ret:
+                break
+
+            await asyncio.sleep(0.1)
+
+            yield frame
+        self.cap.release()
