@@ -29,6 +29,11 @@ Here we have a representation of the architecture of the application folders
 │     └── model-n.pt ...
 ├── 📂 video-capture/
 │     └── video_capture_async.py
+├── 📂 records/                    ⬅️ Folder used to store the videos to be processed by the AI
+│     └── video-1.np4
+│     └── video-2.np4
+│     └── video-3.np4
+│     └── video-n.np4 ...
 ├── main.py
 ├── README.md
 ├── config.json
