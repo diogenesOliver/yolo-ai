@@ -50,3 +50,12 @@ Here we have a representation of the architecture of the application folders
 <p>
 The initial idea of ​​this project basically consists of collecting computer vision data through YOLO models, structuring this data in JSON and sending this data in real time to a Websocket API
 </p>
+
+<h3> 📃 Project Dependencies</h3>
+
+
+<p>
+To install all project dependencies, run the following command
+</p>
+
+<img src="./docs/img/requirements.png">
