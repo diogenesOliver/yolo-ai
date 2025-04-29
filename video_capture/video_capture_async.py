@@ -1,6 +1,7 @@
 import os
 import cv2
 import asyncio
+import json
 
 from services.sleep_detection.main import SleedDetection
 
@@ -11,6 +12,11 @@ class VideoProcess:
         self.video_path = os.path.join('./records', video_name)
 
         pass
+
+        self.json_file = "config.json"
+
+        with open(self.json_file, 'r') as f:
+            self.config = json.load(f)
 
     def open_video(self):
         if not os.path.exists(self.video_path):
