@@ -35,10 +35,10 @@ Here we have a representation of the architecture of the application folders
 │     └── video-3.np4
 │     └── video-n.np4 ...
 ├── 📂 records/                    ⬅️ Videos processed by AI
-│     └── video-results-1.np4
-│     └── video-results-2.np4
-│     └── video-results-3.np4
-│     └── video-results-n.np4
+│     └── video-results-1.mp4
+│     └── video-results-2.mp4
+│     └── video-results-3.mp4
+│     └── video-results-n.mp4
 ├── main.py
 ├── README.md
 ├── config.json
