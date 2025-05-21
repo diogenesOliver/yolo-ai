@@ -1,6 +1,5 @@
 import os
 import cv2
-import asyncio
 import json
 
 from services.sleep_detection.main import SleedDetection
@@ -36,16 +35,3 @@ class VideoProcess:
             cv2.imshow("Video", frame)
             if cv2.waitKey(25) & 0xFF == ord('q'):
                 break
-
-    async def process_video_async(self):
-        self.open_video()
-        
-        while self.cap.isOpened():
-            ret, frame = self.cap.read()
-            if not ret:
-                break
-
-            await asyncio.sleep(0.1)
-
-            yield frame
-        self.cap.release()
