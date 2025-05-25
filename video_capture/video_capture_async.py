@@ -3,12 +3,15 @@ import cv2
 import json
 
 from services.sleep_detection.main import SleedDetection
+from utils.yolo_model_handler import YOLOModelHandler
 
 class VideoProcess:
-    def __init__(self, video_name, target_size=(800, 600)):
+    def __init__(self, video_name, target_size=(640, 480)):
         self.video_name = video_name
         self.target_size = target_size
         self.video_path = os.path.join('./records', video_name)
+
+        self.models = YOLOModelHandler()
 
         pass
 
@@ -30,8 +33,7 @@ class VideoProcess:
             frame = cv2.resize(frame, self.target_size)
 
             if self.config['process']['service'][0]['application'] == "SleepDetector":
-                SleedDetection().process_frame(frame)
-
+                SleedDetection().process_frame(frame, self.models.sleeping_detection)
 
             if not ret:
                 break

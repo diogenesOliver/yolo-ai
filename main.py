@@ -2,8 +2,8 @@ import json
 import argparse
 import os
 
-from utils.yolo_model_handler import YOLOModelHandler
 from video_capture.video_capture_async import VideoProcess
+from process.main import ServiceProcess
 
 json_file = "config.json"
 
@@ -20,7 +20,9 @@ def main():
 
     if args.realtime:
         records_path = './records'
+        
         video_id = config['process']['service'][0]['video_id']
+        video_application = config['process']['service'][0]['application']
 
         if os.path.exists(records_path):
             for file in os.listdir(records_path):
@@ -31,9 +33,10 @@ def main():
                     
                     if file == video_id:
                         video_name = f"{file}.mp4"
-                        VideoProcess(video_name).open_video()
-
                         print("[INFO] - Video processing started")
+                        
+                        frame_generator = VideoProcess(video_name).open_video()
+                        ServiceProcess().initialize_process(video_application, config, frame_generator)
 
                         return
 

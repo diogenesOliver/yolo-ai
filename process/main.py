@@ -7,10 +7,10 @@ class ServiceProcess:
     def __init__(self):
         pass
 
-    def initialize_process(self, video_application, config):
+    async def initialize_process(self, video_application, config, frame):
         try:
             if video_application == 'SleepDetector':
-                self.sleeping_detection = SleedDetection(config).process_frame()
+                self.sleeping_detection = await SleedDetection(config).process_frame(frame)
         
         except Exception as e:
             logging.error(f'- Process incialization error: {e}')
