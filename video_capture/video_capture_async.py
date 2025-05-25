@@ -29,6 +29,10 @@ class VideoProcess:
             ret, frame = self.cap.read()
             frame = cv2.resize(frame, self.target_size)
 
+            if self.config['process']['service'][0]['application'] == "SleepDetector":
+                SleedDetection().process_frame(frame)
+
+
             if not ret:
                 break
 
