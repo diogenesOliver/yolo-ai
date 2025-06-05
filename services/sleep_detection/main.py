@@ -3,5 +3,5 @@ class SleedDetection:
         pass
 
     def process_frame(self, frame, model):
-        print(frame)
-        print(model)
+        results = model(frame)
+        return frame
